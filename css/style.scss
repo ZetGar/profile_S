@@ -1,0 +1,457 @@
+@import "_profile";
+@import "_btn";
+
+$tablet: "screen and (max-width:992px)";
+$mobile: "screen and (max-width:768px)";
+$titFont: unquote("noto sans CJK KR");
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin bg {
+  width: 100vw;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+body {
+  // overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #fbf1e5;
+}
+
+section {
+  position: relative;
+  width: 1000px;
+  height: 80vh;
+  margin: 100px auto 0;
+
+  // background-image: url(./../images/background_pc.png);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+
+  h5 {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
+
+  .contact {
+    position: absolute;
+    top: 45px;
+    right: 0;
+
+    width: 260px;
+    height: 240px;
+    background-image: url(./../images/contact.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    h5 {
+      position: absolute;
+      top: 52px;
+      left: 85px;
+    }
+    a {
+      position: absolute;
+      &:nth-of-type(1) {
+        top: 75px;
+        left: 50px;
+      }
+      &:nth-of-type(2) {
+        top: 122px;
+        left: 50px;
+      }
+    }
+  }
+
+  .filename {
+    .exam {
+      position: absolute;
+      top: 30px;
+      left: 350px;
+
+      width: 98px;
+      height: 80px;
+
+      background-image: url(./../images/example.svg);
+      background-size: cover;
+
+      animation: shake 0.7s linear infinite;
+    }
+
+    a {
+      display: block;
+      position: absolute;
+
+      width: 90px;
+      height: 80px;
+
+      &::before {
+        display: block;
+        content: "";
+
+        width: 90px;
+        height: 60px;
+
+        background-image: url(./../images/folder.png);
+        background-repeat: no-repeat;
+        background-position: center 0;
+      }
+
+      &:hover {
+        &::before {
+          background-position: center -70px;
+        }
+      }
+
+      &:nth-of-type(1) {
+        top: 140px;
+        left: 290px;
+      }
+      &:nth-of-type(2) {
+        top: 140px;
+        left: 400px;
+      }
+      &:nth-of-type(3) {
+        top: 250px;
+        left: 290px;
+      }
+      &:nth-of-type(4) {
+        top: 250px;
+        left: 400px;
+      }
+    }
+  }
+
+  .favorit {
+    position: absolute;
+    top: 400px;
+    width: 260px;
+    height: 280px;
+
+    background-image: url(./../images/favorit.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .anne {
+    .anne_hair {
+      position: absolute;
+      top: 0;
+      left: 83px;
+
+      width: 70px;
+      height: 70px;
+
+      background-image: url(./../images/anne_hiar.svg);
+      background-position: center 0;
+
+      animation: shake 3s linear infinite;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-5deg);
+      }
+      75% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .anne_text {
+      position: absolute;
+      top: 80px;
+      left: 20px;
+
+      width: 200px;
+      height: 140px;
+
+      background-image: url(./../images/anne_text.svg);
+      background-position: center bottom;
+    }
+  }
+
+  .music {
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    z-index: -100;
+
+    width: 210px;
+    height: 120px;
+
+    background-image: url(./../images/music.svg);
+    background-size: contain;
+
+    .ms_app {
+      position: absolute;
+      right: 0;
+      top: -8px;
+      z-index: 100;
+
+      width: 40px;
+      height: 40px;
+      background-image: url(./../images/music_icon.svg);
+      background-size: contain;
+
+      animation: cd 5s linear infinite;
+    }
+
+    .ms_box {
+      overflow: hidden;
+      position: absolute;
+      top: 40px;
+      left: 23px;
+
+      width: 150px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 3px solid #000;
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+      span {
+        display: block;
+        width: 150px;
+        height: 10px;
+        background-color: #45ac87;
+        border-radius: 10px;
+
+        animation: music 30s linear infinite;
+      }
+
+      @keyframes music {
+        0% {
+          transform: translateX(-140px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes cd {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  .sns {
+    position: absolute;
+    left: 290px;
+    top: 400px;
+
+    width: 208px;
+    height: 280px;
+    background-image: url(./../images/sns.svg);
+    background-size: cover;
+
+    .cat {
+      p {
+        position: absolute;
+        top: 80px;
+        left: 25px;
+
+        width: 150px;
+        height: 120px;
+
+        border: 2px solid #000;
+        border-radius: 10px;
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+        img {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 150px;
+          height: 120px;
+
+          object-fit: cover;
+        }
+      }
+    }
+
+    .heart {
+      .heart1 {
+        position: absolute;
+        top: 220px;
+        right: 33px;
+
+        width: 30px;
+        height: 30px;
+        background-image: url(./../images/sns_icon_1.svg);
+        background-size: cover;
+        background-position: center bottom;
+
+        animation: heart 3s 0.5s linear infinite;
+      }
+
+      .heart2 {
+        position: absolute;
+        top: 190px;
+        right: 18px;
+
+        width: 25px;
+        height: 25px;
+        background-image: url(./../images/sns_icon_2.svg);
+        background-size: cover;
+        background-position: center bottom;
+
+        animation: heart 3s linear infinite;
+      }
+      .heart3 {
+        position: absolute;
+        top: 165px;
+        right: 27px;
+
+        width: 20px;
+        height: 20px;
+        background-image: url(./../images/sns_icon_3.svg);
+        background-size: cover;
+        background-position: center bottom;
+
+        animation: heart 3s 1.3s linear infinite;
+      }
+
+      @keyframes heart {
+        0% {
+          opacity: 0;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+
+  .game {
+    position: absolute;
+    top: 50px;
+    right: 260px;
+
+    width: 180px;
+    height: 240px;
+    background-image: url(./../images/game.svg);
+    background-size: contain;
+
+    .game_box {
+      position: absolute;
+      top: 60px;
+      right: 25px;
+
+      width: 137px;
+      height: 155px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+
+        span {
+          animation: scale 0.5s forwards;
+          opacity: 1;
+        }
+
+        @keyframes scale {
+          0% {
+            transform: scale(1);
+          }
+
+          50% {
+            transform: scale(3);
+          }
+          100% {
+            transform: scale(2);
+          }
+        }
+      }
+
+      span {
+        display: block;
+        opacity: 0;
+
+        &:nth-of-type(1) {
+          position: absolute;
+          top: calc(50% - 50px);
+          left: calc(50% - 55px);
+
+          width: 100px;
+          height: 100px;
+
+          background-image: url(./../images/game_icon.svg);
+          background-size: cover;
+          background-position: center center;
+        }
+        &:nth-of-type(2) {
+          position: absolute;
+          top: 110px;
+          left: 20px;
+
+          width: 100px;
+          height: 100px;
+
+          color: #fff;
+          text-align: center;
+          align-items: center;
+          font-size: 0.8rem;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  .hello {
+    position: absolute;
+    top: 300px;
+    right: 0;
+
+    width: 450px;
+    height: 390px;
+    background-image: url(./../images/hello_s.svg);
+    background-size: cover;
+
+    .hello_container {
+      width: 450px;
+      height: 390px;
+      overflow: hidden;
+
+      li {
+        width: 460px;
+        height: 390px;
+
+        // &:nth-of-type(1) {
+        //   background-image: url(./../images/hello_s_1.svg);
+        // }
+        // &:nth-of-type(2) {
+        //   background-image: url(./../images/hello_s_2.svg);
+        // }
+        // &:nth-of-type(3) {
+        //   background-image: url(./../images/hello_s_3.svg);
+        // }
+      }
+    }
+  }
+}
