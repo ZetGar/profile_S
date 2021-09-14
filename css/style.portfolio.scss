@@ -41,14 +41,13 @@
       transition: transform 0.6s;
     }
     &:nth-of-type(3) {
-      right: 0;
+      left: 0;
       bottom: 0;
-      width: 1.5px;
-      height: 100%;
-      transform: scaleY(0);
-      transform-origin: top;
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: right;
       transition: transform 0.6s;
-      transition-delay: 0.6s;
     }
     &:nth-of-type(4) {
       left: 0;
@@ -198,6 +197,7 @@
 
 section.portfolio {
   padding: 130px 0;
+
   &:nth-of-type(1) {
     margin-top: 130px;
   }
@@ -223,6 +223,11 @@ section.portfolio {
           }
         }
       }
+      .withland_com {
+        @media #{$mobile} {
+          margin-top: -50px;
+        }
+      }
     }
   }
   .container {
@@ -232,18 +237,42 @@ section.portfolio {
     width: 1000px;
     margin: 0 auto;
 
+    @media #{$tablet} {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+
     .left {
       width: 30%;
+
+      @media #{$tablet} {
+        width: 80%;
+        margin: 400px auto 0;
+        text-align: center;
+      }
+
+      @media #{$mobile} {
+        margin: 300px auto 0;
+        &:nth-of-type(2) {
+          margin-top: 100px;
+        }
+      }
 
       h2 {
         margin-bottom: 20px;
         font-size: 40px;
         font-weight: 800;
       }
+
       p {
         margin-bottom: 50px;
         font-size: 1.2rem;
         line-height: 1.5;
+
+        @media #{$tablet} {
+          margin-bottom: 30px;
+        }
       }
 
       ul {
@@ -253,6 +282,16 @@ section.portfolio {
 
         margin-top: 100px;
         width: 75%;
+
+        @media #{$tablet} {
+          width: 30%;
+          margin: 50px auto 0;
+        }
+
+        @media #{$mobile} {
+          justify-content: space-evenly;
+          width: 80%;
+        }
 
         li {
           color: #555;
@@ -272,6 +311,16 @@ section.portfolio {
     .right {
       position: relative;
       width: 70%;
+
+      @media #{$tablet} {
+        top: -300px;
+        left: -30px;
+        margin: 0 auto;
+      }
+
+      @media #{$mobile} {
+        left: calc(50% - 40%);
+      }
 
       a.original {
         display: block;
@@ -367,6 +416,10 @@ section.portfolio {
         background-image: url(./../images/tablet_n.png);
         background-size: contain;
         background-position: center;
+
+        @media #{$mobile} {
+          display: none;
+        }
 
         .tablet_container {
           position: absolute;

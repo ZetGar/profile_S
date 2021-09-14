@@ -420,14 +420,13 @@ footer address span {
 }
 
 .btn span:nth-of-type(3) {
-  right: 0;
+  left: 0;
   bottom: 0;
-  width: 1.5px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.6s;
-  transition-delay: 0.6s;
 }
 
 .btn span:nth-of-type(4) {
@@ -602,6 +601,12 @@ section.portfolio:nth-of-type(even) .container .right a.original:hover {
   background-color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  section.portfolio:nth-of-type(even) .container .withland_com {
+    margin-top: -50px;
+  }
+}
+
 section.portfolio .container {
   display: flex;
   justify-content: space-between;
@@ -609,8 +614,33 @@ section.portfolio .container {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 992px) {
+  section.portfolio .container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 section.portfolio .container .left {
   width: 30%;
+}
+
+@media screen and (max-width: 992px) {
+  section.portfolio .container .left {
+    width: 80%;
+    margin: 400px auto 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio .container .left {
+    margin: 300px auto 0;
+  }
+  section.portfolio .container .left:nth-of-type(2) {
+    margin-top: 100px;
+  }
 }
 
 section.portfolio .container .left h2 {
@@ -625,12 +655,32 @@ section.portfolio .container .left p {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 992px) {
+  section.portfolio .container .left p {
+    margin-bottom: 30px;
+  }
+}
+
 section.portfolio .container .left ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 100px;
   width: 75%;
+}
+
+@media screen and (max-width: 992px) {
+  section.portfolio .container .left ul {
+    width: 30%;
+    margin: 50px auto 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio .container .left ul {
+    justify-content: space-evenly;
+    width: 80%;
+  }
 }
 
 section.portfolio .container .left ul li {
@@ -647,6 +697,20 @@ section.portfolio .container .left ul li {
 section.portfolio .container .right {
   position: relative;
   width: 70%;
+}
+
+@media screen and (max-width: 992px) {
+  section.portfolio .container .right {
+    top: -300px;
+    left: -30px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio .container .right {
+    left: calc(50% - 40%);
+  }
 }
 
 section.portfolio .container .right a.original {
@@ -739,6 +803,12 @@ section.portfolio .container .right .tablet {
   background-image: url(./../images/tablet_n.png);
   background-size: contain;
   background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio .container .right .tablet {
+    display: none;
+  }
 }
 
 section.portfolio .container .right .tablet .tablet_container {
