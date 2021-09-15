@@ -830,6 +830,10 @@ section.portfolio .container .right .tablet .tablet_container span {
   animation: port 8s 2s infinite;
 }
 
+section.portfolio .container .right .tablet .tablet_container span.dokdo {
+  background-image: url(./../images/dokdo.gif);
+}
+
 section.portfolio .container .right .tablet .tablet_container span.iblankT {
   background-image: url(./../images/iblank_ta.png);
 }
