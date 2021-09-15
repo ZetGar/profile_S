@@ -149,18 +149,20 @@ $(function(){
     $('#popup').toggleClass('on');
 
     if($('#popup').hasClass('on')){
-      $('#popup').css({display:'block'});
+      $('#popup').show();
       $('.gnb>li').eq(3).addClass('on').siblings().removeClass('on');
     }
 
     $('.close').on('click',function(){
-      $('#popup').css({display:'none'}); 
-      $('.gnb>li').eq(1).addClass('on').siblings().removeClass('on');
+      $('#popup').hide();
+      $('.gnb>li').eq(2).addClass('on').siblings().removeClass('on');
     });
 
-    $('.contact').on('click',function(){
-      $('#popup').css({display:'none'}); 
-      $('.gnb>li').eq(1).addClass('on').siblings().removeClass('on'); 
+    $('#popup').on('click',function(e){
+      if(e.target == e.currentTarget){
+        $('#popup').hide();
+        $('.gnb>li').eq(2).addClass('on').siblings().removeClass('on');
+      }
     });
     
   });
