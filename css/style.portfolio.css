@@ -380,7 +380,7 @@ footer address span {
 .btn {
   position: relative;
   display: inline-block;
-  margin-right: 10px;
+  margin: 10px 0 0 10px;
   width: 100px;
   height: 30px;
   color: #666;
