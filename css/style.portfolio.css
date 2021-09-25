@@ -110,7 +110,10 @@ header.sticky .hd_content {
 }
 
 header.sticky .hd_content .logo a {
-  color: #222;
+  background-image: url(./../images/s_logo_b.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header .hd_content {
@@ -136,9 +139,16 @@ header .hd_content {
 
 header .hd_content .logo a {
   display: block;
+  width: 100px;
+  height: 30px;
   color: #222;
   font-size: 2rem;
   line-height: 30px;
+  text-indent: -9999px;
+  background-image: url(./../images/s_logo_b.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header .hd_content nav {
@@ -311,7 +321,7 @@ header .hd_content .total {
   }
 }
 
-header .hd_content .total span {
+header .hd_content .total div {
   display: block;
   position: absolute;
   top: calc(50% - 1.5px);
@@ -322,9 +332,10 @@ header .hd_content .total span {
   text-indent: -9999px;
   background-color: #222;
   transition: all 0.3s;
+  animation: none;
 }
 
-header .hd_content .total span:before {
+header .hd_content .total div:before {
   content: "";
   position: absolute;
   top: -8px;
@@ -335,7 +346,7 @@ header .hd_content .total span:before {
   transition: all 0.3s;
 }
 
-header .hd_content .total span:after {
+header .hd_content .total div:after {
   content: "";
   position: absolute;
   top: 8px;
@@ -346,24 +357,28 @@ header .hd_content .total span:after {
   transition: all 0.3s;
 }
 
-header .hd_content .total.on span {
+header .hd_content .total.on div {
   background-color: rgba(150, 150, 150, 0);
 }
 
-header .hd_content .total.on span:before, header .hd_content .total.on span:after {
+header .hd_content .total.on div:before, header .hd_content .total.on div:after {
   top: 0;
   background-color: #fff;
 }
 
-header .hd_content .total.on span:before {
+header .hd_content .total.on div:before {
   transform: rotate(45deg);
 }
 
-header .hd_content .total.on span:after {
+header .hd_content .total.on div:after {
   transform: rotate(-45deg);
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  left: calc(50% - 10%);
   padding: 50px 0;
 }
 

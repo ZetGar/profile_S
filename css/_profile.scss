@@ -37,7 +37,10 @@ header {
 
       .logo {
         a {
-          color: #222;
+          background-image: url(./../images/s_logo_b.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
         }
       }
     }
@@ -69,9 +72,18 @@ header {
       a {
         display: block;
 
+        width: 100px;
+        height: 30px;
+
         color: #222;
         font-size: 2rem;
         line-height: 30px;
+        text-indent: -9999px;
+
+        background-image: url(./../images/s_logo_b.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
 
@@ -237,7 +249,7 @@ header {
         right: 0;
       }
 
-      span {
+      div {
         display: block;
 
         position: absolute;
@@ -252,6 +264,7 @@ header {
 
         background-color: #222;
         transition: all 0.3s;
+        animation: none;
 
         &:before {
           content: "";
@@ -283,7 +296,7 @@ header {
       }
 
       &.on {
-        span {
+        div {
           background-color: rgba(150, 150, 150, 0);
 
           &:before,
@@ -304,7 +317,12 @@ header {
 } // end of header
 
 footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  left: calc(50% - 10%);
   padding: 50px 0;
+
   address {
     color: #999;
     text-align: center;
