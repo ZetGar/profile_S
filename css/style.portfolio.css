@@ -375,10 +375,6 @@ header .hd_content .total.on div:after {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
-  left: calc(50% - 10%);
   padding: 50px 0;
 }
 

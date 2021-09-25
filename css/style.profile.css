@@ -140,7 +140,7 @@ header .hd_content {
 header .hd_content .logo a {
   display: block;
   width: 100px;
-  height: 50px;
+  height: 30px;
   color: #222;
   font-size: 2rem;
   line-height: 30px;
@@ -221,29 +221,24 @@ header .hd_content nav .gnb li a:after {
   transition: all 0.5s ease-out;
 }
 
-header .hd_content nav .gnb li.on,
-header .hd_content nav .gnb li:hover {
+header .hd_content nav .gnb li.on, header .hd_content nav .gnb li:hover {
   line-height: 50px;
 }
 
-header .hd_content nav .gnb li.on a,
-header .hd_content nav .gnb li:hover a {
+header .hd_content nav .gnb li.on a, header .hd_content nav .gnb li:hover a {
   color: #222;
 }
 
-header .hd_content nav .gnb li.on a:after,
-header .hd_content nav .gnb li:hover a:after {
+header .hd_content nav .gnb li.on a:after, header .hd_content nav .gnb li:hover a:after {
   width: 100%;
 }
 
 @media screen and (max-width: 992px) {
-  header .hd_content nav .gnb li.on a,
-  header .hd_content nav .gnb li:hover a {
+  header .hd_content nav .gnb li.on a, header .hd_content nav .gnb li:hover a {
     color: #fff;
     font-weight: 800;
   }
-  header .hd_content nav .gnb li.on a:after,
-  header .hd_content nav .gnb li:hover a:after {
+  header .hd_content nav .gnb li.on a:after, header .hd_content nav .gnb li:hover a:after {
     display: none;
   }
 }
@@ -366,8 +361,7 @@ header .hd_content .total.on div {
   background-color: rgba(150, 150, 150, 0);
 }
 
-header .hd_content .total.on div:before,
-header .hd_content .total.on div:after {
+header .hd_content .total.on div:before, header .hd_content .total.on div:after {
   top: 0;
   background-color: #fff;
 }
@@ -381,10 +375,6 @@ header .hd_content .total.on div:after {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
-  left: calc(50% - 10%);
   padding: 50px 0;
 }
 
@@ -582,26 +572,14 @@ section.about .ab_container .ab_right .ab_skill_container .skills .ab_skill {
   section.about .ab_container .ab_right .ab_skill_container .skills .ab_skill {
     width: 100%;
   }
-  section.about
-    .ab_container
-    .ab_right
-    .ab_skill_container
-    .skills
-    .ab_skill
-    h4 {
+  section.about .ab_container .ab_right .ab_skill_container .skills .ab_skill h4 {
     width: 40%;
     padding: 20px 0;
     margin: 80px auto 0;
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .codding_img
-  p {
+section.about .ab_container .ab_right .ab_skill_container .skills .codding_img p {
   position: absolute;
   top: -40px;
   right: 0;
@@ -613,26 +591,14 @@ section.about
 }
 
 @media screen and (max-width: 768px) {
-  section.about
-    .ab_container
-    .ab_right
-    .ab_skill_container
-    .skills
-    .codding_img
-    p {
+  section.about .ab_container .ab_right .ab_skill_container .skills .codding_img p {
     display: block;
     left: calc(50% - 30px);
     margin: 0;
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .codding_img
-  div {
+section.about .ab_container .ab_right .ab_skill_container .skills .codding_img div {
   position: absolute;
   top: -13px;
   right: 17px;
@@ -641,65 +607,29 @@ section.about
 }
 
 @media screen and (max-width: 768px) {
-  section.about
-    .ab_container
-    .ab_right
-    .ab_skill_container
-    .skills
-    .codding_img
-    div {
+  section.about .ab_container .ab_right .ab_skill_container .skills .codding_img div {
     top: -28px;
     left: calc(50% - 12.5px);
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .codding_img
-  div:nth-of-type(1) {
+section.about .ab_container .ab_right .ab_skill_container .skills .codding_img div:nth-of-type(1) {
   background-image: url(./../images/codding_y.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .codding_img
-  div:nth-of-type(2) {
+section.about .ab_container .ab_right .ab_skill_container .skills .codding_img div:nth-of-type(2) {
   background-image: url(./../images/codding_r.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .codding_img
-  div:nth-of-type(3) {
+section.about .ab_container .ab_right .ab_skill_container .skills .codding_img div:nth-of-type(3) {
   background-image: url(./../images/codding_g.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .codding_img
-  div:nth-of-type(4) {
+section.about .ab_container .ab_right .ab_skill_container .skills .codding_img div:nth-of-type(4) {
   background-image: url(./../images/codding_b.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .painting_img
-  p {
+section.about .ab_container .ab_right .ab_skill_container .skills .painting_img p {
   position: absolute;
   top: -40px;
   right: 0;
@@ -711,26 +641,14 @@ section.about
 }
 
 @media screen and (max-width: 768px) {
-  section.about
-    .ab_container
-    .ab_right
-    .ab_skill_container
-    .skills
-    .painting_img
-    p {
+  section.about .ab_container .ab_right .ab_skill_container .skills .painting_img p {
     display: block;
     left: calc(50%);
     margin: 0;
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .painting_img
-  div {
+section.about .ab_container .ab_right .ab_skill_container .skills .painting_img div {
   position: absolute;
   top: -15px;
   right: 34px;
@@ -739,55 +657,25 @@ section.about
 }
 
 @media screen and (max-width: 768px) {
-  section.about
-    .ab_container
-    .ab_right
-    .ab_skill_container
-    .skills
-    .painting_img
-    div {
+  section.about .ab_container .ab_right .ab_skill_container .skills .painting_img div {
     top: -28px;
     left: calc(50% - 30px);
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .painting_img
-  div:nth-of-type(1) {
+section.about .ab_container .ab_right .ab_skill_container .skills .painting_img div:nth-of-type(1) {
   background-image: url(./../images/painting_y.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .painting_img
-  div:nth-of-type(2) {
+section.about .ab_container .ab_right .ab_skill_container .skills .painting_img div:nth-of-type(2) {
   background-image: url(./../images/painting_r.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .painting_img
-  div:nth-of-type(3) {
+section.about .ab_container .ab_right .ab_skill_container .skills .painting_img div:nth-of-type(3) {
   background-image: url(./../images/painting_g.svg);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  .painting_img
-  div:nth-of-type(4) {
+section.about .ab_container .ab_right .ab_skill_container .skills .painting_img div:nth-of-type(4) {
   background-image: url(./../images/painting_b.svg);
 }
 
@@ -832,25 +720,13 @@ section.about .ab_container .ab_right .ab_skill_container .skills dl dt:after {
 }
 
 @media screen and (max-width: 768px) {
-  section.about
-    .ab_container
-    .ab_right
-    .ab_skill_container
-    .skills
-    dl
-    dt:after {
+  section.about .ab_container .ab_right .ab_skill_container .skills dl dt:after {
     top: -10px;
     left: calc(50% - 7.5px);
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dt.on:after {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dt.on:after {
   background-image: url(./../images/ab_a_up_b.svg);
 }
 
@@ -869,14 +745,7 @@ section.about .ab_container .ab_right .ab_skill_container .skills dl dd {
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -887,15 +756,7 @@ section.about
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span {
   display: block;
   height: 8px;
   background-color: #f8c421;
@@ -913,75 +774,27 @@ section.about
   }
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span.html {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span.html {
   width: 80%;
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span.css {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span.css {
   width: 80%;
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span.java {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span.java {
   width: 60%;
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span.photo {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span.photo {
   width: 90%;
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span.illu {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span.illu {
   width: 95%;
 }
 
-section.about
-  .ab_container
-  .ab_right
-  .ab_skill_container
-  .skills
-  dl
-  dd
-  .skill_wrap
-  span.indi {
+section.about .ab_container .ab_right .ab_skill_container .skills dl dd .skill_wrap span.indi {
   width: 95%;
 }
 
@@ -1082,25 +895,12 @@ section.about .ab_container .ab_career_container .ab_career dl .company dt {
   }
 }
 
-section.about
-  .ab_container
-  .ab_career_container
-  .ab_career
-  dl
-  .company
-  dt
-  span {
+section.about .ab_container .ab_career_container .ab_career dl .company dt span {
   font-size: 1.1rem;
   color: #999;
 }
 
-section.about
-  .ab_container
-  .ab_career_container
-  .ab_career
-  dl
-  .company
-  dt:after {
+section.about .ab_container .ab_career_container .ab_career dl .company dt:after {
   content: "";
   display: inline-block;
   position: absolute;
