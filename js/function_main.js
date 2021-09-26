@@ -20,6 +20,21 @@ $(function(){
     }
   });
 
+  $('.logo>a').on('click',function(evt){
+    evt.preventDefault();
+
+    $('html,body').stop().animate({
+      scrollTop:0
+    });
+  });
+
+  $(window).on('scroll', function(){
+    const scrollpos = $(window).scrollTop();
+    $('.swot').css({
+     'max-height' : + (scrollpos) + 'px'
+    });
+  });
+
 
   // main 영역
   document.addEventListener('mousemove', function(e){
@@ -70,5 +85,31 @@ $(function(){
       $container.css({top:0});
     });
   }, 1000);
+
+
+  
+    // popup_contact
+    $('#popup').toggleClass('on');
+
+    $('.gnb>li').eq(3).on('click', function(){
+      if($('#popup').hasClass('on')){
+      $('#popup').show();
+      $('.gnb>li').eq(3).addClass('on').siblings().removeClass('on');
+      }
+    });
+
+    $('.close').on('click',function(){
+      $('#popup').hide();
+      $('.gnb>li').eq(0).addClass('on').siblings().removeClass('on');
+    });
+
+    $('#popup').on('click',function(e){
+      if(e.target == e.currentTarget){
+        $('#popup').hide();
+        $('.gnb>li').eq(0).addClass('on').siblings().removeClass('on');
+      }
+    });
+
+    
 
 });

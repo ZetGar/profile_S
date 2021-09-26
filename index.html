@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROFILE</title>
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/jquery.min.js"></script>
   <script src="./js/jquery.easing.min.js"></script>
@@ -23,7 +24,7 @@
               <li class="on"><a href="index.html">HOME</a></li>
               <li><a href="profile_about.html">ABOUT</a></li>
               <li><a href="profile_portfolio.html">PORTFOLIO</a></li>
-              <li><a href="study.html">CONTACT</a></li>
+              <li><a href="#">CONTACT</a></li>
             </ul>
 
           </nav>
@@ -37,16 +38,45 @@
 
     <section class="main">
       <div class="mn_container">
-        <h3>KIM SONG I</h3>
-        <p>Designer & Publisher</p>
-        <p>phone: 010-8925-1256</p>
-        <p>e-mail: awesdr10@gmail.com</p>
+        
+        <div class="mn_tit">
+          <h3>KIM SONG I</h3>
+          <p>Designer & Publisher</p>
+          <div class="mn_content">
+          <a href="tel:010-8925-1256">
+            010-8925-1256
+            <!-- <i class="fas fa-mobile-alt"></i> -->
+          </a>
+          <a href="mailto:awesde10@gmail.com">
+            <!-- <i class="fas fa-envelope"></i> -->
+            awesde10@gmail.com
+          </a>
+        </div>
+        </div>
       </div>
     </section>
 
     <footer>
       <address>&copy; KIM SONG I _ PORTFOLIO _ 2021_ver.1.0</address>
     </footer>
+
+    <div id="popup">
+      <div class="contact">
+        <h3>KIM SONG I</h3>
+        <p>제가 더 궁금하시거나 마음에 드신다면?</p>
+        
+        <div class="con_sns">
+        <a href="tel:010-8925-1256">
+          <i class="fas fa-mobile-alt"></i>
+        </a>
+        <a href="mailto:awesde10@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        </div>
+        
+        <a href="#" class="close">X</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
