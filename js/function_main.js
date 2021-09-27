@@ -58,33 +58,61 @@ $(function(){
   });
 
 
-  // sns영역
+  const $pagination = $('.pf_pagination>li');
+  const $slides = $('.pf_slides');
+
   let nowIdx=0;
+  let intervalKey;
 
-  setInterval(function(){
-    $('.cat >p').eq(nowIdx).children('img').fadeOut();
+  const moveFn = function(){
+    $pagination.eq(nowIdx).addClass('on').siblings().removeClass('on');
+    $slides.stop().animate({left: -158*nowIdx});
+  };
 
-    if(nowIdx<3){
-      nowIdx++;
-    } else {
-      nowIdx=0;
-    }
+  $(window).on('load', function(){    
 
-    $('.cat >p').eq(nowIdx).children('img').fadeIn();
+    nowIdx = $pagination.index($(this));
+    
+    intervalKey = setInterval(() => {
+
+      if(nowIdx<3){
+        nowIdx++;
+      }else{
+        nowIdx=0;
+      }
+
+      moveFn();
+
+    }, 3000);
+  });
+  
+
+
+  // sns영역
+  // setInterval(function(){
+  //   $('.cat >p').eq(nowIdx).children('img').fadeOut();
+
+  //   if(nowIdx<3){
+  //     nowIdx++;
+  //   } else {
+  //     nowIdx=0;
+  //   }
+
+  //   $('.cat >p').eq(nowIdx).children('img').fadeIn();
 
     
-  },2000);
+  // },2000);
 
-  // hello 영역
-  setInterval(function(){
-    const $container = $('.hello_container');
-    const $hello = $container.children('li');
+  // // hello 영역
+  // setInterval(function(){
+  //   const $container = $('.hello_container');
+  //   const $hello = $container.children('li');
 
-    $hello.stop().animate({top:-390},function(){
-      $hello.eq(0).appendTo($container);
-      $container.css({top:0});
-    });
-  }, 1000);
+  //   $hello.stop().animate({top:-390},function(){
+  //     $hello.eq(0).appendTo($container);
+  //     $container.css({top:0});
+  //   });
+  // }, 1000);
 
 
   
