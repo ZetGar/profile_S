@@ -155,13 +155,13 @@ $(function(){
 
     $('.close').on('click',function(){
       $('#popup').hide();
-      $('.gnb>li').eq(2).addClass('on').siblings().removeClass('on');
+      $('.gnb>li').eq(1).addClass('on').siblings().removeClass('on');
     });
 
     $('#popup').on('click',function(e){
       if(e.target == e.currentTarget){
         $('#popup').hide();
-        $('.gnb>li').eq(2).addClass('on').siblings().removeClass('on');
+        $('.gnb>li').eq(1).addClass('on').siblings().removeClass('on');
       }
     });
     
