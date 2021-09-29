@@ -43,12 +43,12 @@ $(function(){
     let x = e.offsetX;
     let y = e.offsetY;
 
-    bubbles.style.left = x+'px';
-    bubbles.style.top = y+'px';
+    bubbles.style.left = x + 'px';
+    bubbles.style.top = y + 'px';
 
-    let size = Math.random () * 40;
-    bubbles.style.width = size+'px';
-    bubbles.style.height = size+'px';
+    let size = Math.random () * 30;
+    bubbles.style.width = size + 'px';
+    bubbles.style.height = size + 'px';
 
     body.appendChild(bubbles);
 

@@ -319,7 +319,9 @@ section.portfolio {
       }
 
       @media #{$mobile} {
-        left: calc(50% - 40%);
+        position: none;
+        width: 100%;
+        margin: 0 25px;
       }
 
       a.original {
@@ -343,6 +345,10 @@ section.portfolio {
 
         transition: 0.7s;
 
+        @media #{$mobile} {
+          right: calc(50% - 150px);
+        }
+
         &:hover {
           color: #fff;
           background-color: #f8c421;
@@ -358,6 +364,13 @@ section.portfolio {
         background-image: url(./../images/pc_big_n.png);
         background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
+
+        @media #{$mobile} {
+          position: none;
+          width: 100%;
+          margin: 0 auto;
+        }
 
         .pc_container {
           display: block;
@@ -368,6 +381,11 @@ section.portfolio {
           width: 353px;
           height: 188px;
           background-color: #666;
+
+          @media #{$mobile} {
+            right: initial;
+            left: calc(50% - 27.3%);
+          }
 
           span {
             display: block;

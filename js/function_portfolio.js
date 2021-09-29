@@ -53,8 +53,6 @@ $(function(){
 
   $('.total').on('click',function(){
     $(this).toggleClass('on');
-
-    if($(window).width()>992){
     
     if($('.total').hasClass('on')){
       $('nav').css({
@@ -64,7 +62,6 @@ $(function(){
       $('nav').css({
         right: '-500px'
       });
-    }
     }
   });
   

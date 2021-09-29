@@ -99,6 +99,12 @@ header {
   transition: 0.6s;
 }
 
+@media screen and (max-width: 992px) {
+  header {
+    width: 100%;
+  }
+}
+
 header.sticky {
   height: 60px;
   background-color: #fff;
@@ -116,12 +122,16 @@ header.sticky .hd_content .logo a {
   background-position: center;
 }
 
+@media screen and (max-width: 992px) {
+  header.sticky .hd_content .logo {
+    margin-right: 20px;
+  }
+}
+
 header .hd_content {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: calc(50% - 500px);
   width: 1000px;
   margin: 0 auto;
   padding: 30px 0 20px 0;
@@ -131,8 +141,8 @@ header .hd_content {
 
 @media screen and (max-width: 992px) {
   header .hd_content {
-    left: calc(50% - 45%);
-    width: 90%;
+    left: 0;
+    width: 100%;
     padding: 30px 0;
   }
 }
@@ -161,7 +171,7 @@ header .hd_content nav {
     position: absolute;
     top: 0;
     right: -500px;
-    width: 200px;
+    width: 30%;
     height: 100vh;
     background-color: #666;
     transition: 0.3s;
@@ -262,6 +272,7 @@ header .hd_content nav .lnb {
 
 header .hd_content nav .lnb li {
   position: relative;
+  z-index: 0;
   width: 13px;
   height: 13px;
   margin-top: 10px;
@@ -317,7 +328,7 @@ header .hd_content .total {
 @media screen and (max-width: 992px) {
   header .hd_content .total {
     display: block;
-    right: 0;
+    right: 2px;
   }
 }
 
@@ -325,7 +336,7 @@ header .hd_content .total div {
   display: block;
   position: absolute;
   top: calc(50% - 1.5px);
-  left: 0;
+  right: 20px;
   z-index: 9999;
   width: 25px;
   height: 3px;
@@ -386,6 +397,98 @@ footer address {
 
 footer address span {
   font-weight: 800;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popup .contact {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  z-index: 99999;
+  width: 500px;
+  height: 320px;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 992px) {
+  #popup .contact {
+    left: calc(50% - 38%);
+  }
+}
+
+#popup .contact h3 {
+  margin: 50px 0 10px;
+  color: #222;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#popup .contact p {
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #222;
+}
+
+#popup .contact .con_sns {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 50px;
+}
+
+#popup .contact .con_sns a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: 50px;
+  text-align: center;
+  border: 2px solid #222;
+  border-radius: 50%;
+}
+
+#popup .contact .con_sns a i {
+  font-size: 30px;
+  line-height: 60px;
+}
+
+#popup .contact .con_sns a:hover {
+  background-color: #222;
+}
+
+#popup .contact .con_sns a:hover i {
+  color: #fff;
+}
+
+#popup .contact .close {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 50px;
+  color: #666;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 800;
+  background-color: #f2f2f2;
+}
+
+#popup .contact .close:hover {
+  color: #222;
+  background-color: #c7c7c7;
 }
 
 h2 {

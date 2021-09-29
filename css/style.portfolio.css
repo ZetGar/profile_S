@@ -99,6 +99,12 @@ header {
   transition: 0.6s;
 }
 
+@media screen and (max-width: 992px) {
+  header {
+    width: 100%;
+  }
+}
+
 header.sticky {
   height: 60px;
   background-color: #fff;
@@ -116,6 +122,12 @@ header.sticky .hd_content .logo a {
   background-position: center;
 }
 
+@media screen and (max-width: 992px) {
+  header.sticky .hd_content .logo {
+    margin-right: 20px;
+  }
+}
+
 header .hd_content {
   position: relative;
   display: flex;
@@ -129,8 +141,8 @@ header .hd_content {
 
 @media screen and (max-width: 992px) {
   header .hd_content {
-    left: calc(50% - 45%);
-    width: 90%;
+    left: 0;
+    width: 100%;
     padding: 30px 0;
   }
 }
@@ -159,7 +171,7 @@ header .hd_content nav {
     position: absolute;
     top: 0;
     right: -500px;
-    width: 200px;
+    width: 30%;
     height: 100vh;
     background-color: #666;
     transition: 0.3s;
@@ -316,7 +328,7 @@ header .hd_content .total {
 @media screen and (max-width: 992px) {
   header .hd_content .total {
     display: block;
-    right: 0;
+    right: 2px;
   }
 }
 
@@ -811,7 +823,9 @@ section.portfolio .container .right {
 
 @media screen and (max-width: 768px) {
   section.portfolio .container .right {
-    left: calc(50% - 40%);
+    position: none;
+    width: 100%;
+    margin: 0 25px;
   }
 }
 
@@ -832,6 +846,12 @@ section.portfolio .container .right a.original {
   transition: 0.7s;
 }
 
+@media screen and (max-width: 768px) {
+  section.portfolio .container .right a.original {
+    right: calc(50% - 150px);
+  }
+}
+
 section.portfolio .container .right a.original:hover {
   color: #fff;
   background-color: #f8c421;
@@ -846,6 +866,15 @@ section.portfolio .container .right .pc {
   background-image: url(./../images/pc_big_n.png);
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio .container .right .pc {
+    position: none;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 section.portfolio .container .right .pc .pc_container {
@@ -856,6 +885,13 @@ section.portfolio .container .right .pc .pc_container {
   width: 353px;
   height: 188px;
   background-color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio .container .right .pc .pc_container {
+    right: initial;
+    left: calc(50% - 27.3%);
+  }
 }
 
 section.portfolio .container .right .pc .pc_container span {
