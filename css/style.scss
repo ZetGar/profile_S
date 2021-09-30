@@ -27,7 +27,7 @@ $titFont: unquote("noto sans CJK KR");
 }
 
 body {
-  overflow: hidden;
+  // overflow: hidden;
   height: 100vh;
 }
 
@@ -56,28 +56,10 @@ span {
 
 section.main {
   width: 100vw;
-  height: 100vh;
-  .mn_pic {
-    .line {
-      position: absolute;
-      top: 150px;
-      left: calc(50% - 420px);
-      width: 400px;
-      height: 200px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url(./../images/juin_line.svg);
-    }
-    .people {
-      position: absolute;
-      top: 335px;
-      left: calc(50% - 450px);
-      width: 400px;
-      height: 250px;
-      background-image: url(./../images/juin.gif);
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+  height: 85vh;
+
+  @media #{$mobile} {
+    height: 130vh;
   }
 
   .mn_container {
@@ -88,8 +70,10 @@ section.main {
     margin: 0 auto;
     padding-top: 200px;
 
-    @media #{$tablet} {
+    @media #{$mobile} {
+      display: block;
       width: 100%;
+      padding-top: 100px;
     }
 
     .mn_visual {
@@ -97,7 +81,11 @@ section.main {
       width: 55%;
       height: 550px;
 
-      // background-color: rgba(0, 0, 0, 0.2);
+      @media #{$tablet} {
+        position: none;
+        display: block;
+        width: 100%;
+      }
 
       .mn_background {
         .elements {
@@ -105,7 +93,6 @@ section.main {
             position: absolute;
             width: 40px;
             height: 40px;
-            // border: 1px solid #000;
 
             @keyframes shake {
               0% {
@@ -238,7 +225,7 @@ section.main {
               animation: planet 20s infinite;
             }
             &:nth-of-type(2) {
-              top: 0%;
+              top: 2%;
               left: 35%;
               z-index: 100;
               width: 110px;
@@ -289,6 +276,10 @@ section.main {
               background-image: url(./../images/mn_uju.gif);
               background-size: contain;
               background-repeat: no-repeat;
+
+              @media #{$mobile} {
+                left: 27%;
+              }
             }
           }
         }
@@ -305,6 +296,11 @@ section.main {
       background-color: rgba(255, 255, 255, 0.5);
       box-sizing: border-box;
 
+      @media #{$mobile} {
+        width: 100%;
+        text-align: center;
+      }
+
       h3 {
         margin-bottom: 10px;
         font-size: 2.5rem;
@@ -316,6 +312,11 @@ section.main {
         color: #222;
         font-size: 1.5rem;
         font-weight: 200;
+
+        @media #{$mobile} {
+          text-align: center;
+          padding: 0 auto 30px;
+        }
       }
 
       > a {
@@ -327,6 +328,22 @@ section.main {
         font-size: 1.3rem;
         font-weight: 600;
         line-height: 30px;
+
+        @media #{$mobile} {
+          width: 170px;
+          margin: 0 auto;
+
+          text-align: center;
+
+          &:nth-of-type(1) {
+            padding-top: 15px;
+            border-top: 1px solid #000;
+          }
+          &:nth-of-type(3) {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #000;
+          }
+        }
 
         &:hover {
           color: #222;
@@ -389,6 +406,10 @@ section.main {
         width: 100%;
         height: 268px;
 
+        @media #{$mobile} {
+          position: none;
+        }
+
         > a {
           display: block;
           margin: 50px 0 15px;
@@ -411,7 +432,7 @@ section.main {
           z-index: 0;
           width: 100%;
           height: 2px;
-          // background-color: rgb(206, 206, 206);
+
           li {
             overflow: hidden;
             position: relative;
@@ -467,7 +488,6 @@ section.main {
             margin-right: 10px;
             &:hover {
               > a:after {
-                // outline: 2px solid #f8c421;
                 background-color: rgba(0, 0, 0, 0.2);
               }
             }

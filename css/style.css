@@ -573,7 +573,6 @@ a.btn span:nth-of-type(2) {
 }
 
 body {
-  overflow: hidden;
   height: 100vh;
 }
 
@@ -601,29 +600,13 @@ span {
 
 section.main {
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
 }
 
-section.main .mn_pic .line {
-  position: absolute;
-  top: 150px;
-  left: calc(50% - 420px);
-  width: 400px;
-  height: 200px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(./../images/juin_line.svg);
-}
-
-section.main .mn_pic .people {
-  position: absolute;
-  top: 335px;
-  left: calc(50% - 450px);
-  width: 400px;
-  height: 250px;
-  background-image: url(./../images/juin.gif);
-  background-size: contain;
-  background-repeat: no-repeat;
+@media screen and (max-width: 768px) {
+  section.main {
+    height: 130vh;
+  }
 }
 
 section.main .mn_container {
@@ -635,9 +618,11 @@ section.main .mn_container {
   padding-top: 200px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   section.main .mn_container {
+    display: block;
     width: 100%;
+    padding-top: 100px;
   }
 }
 
@@ -645,6 +630,14 @@ section.main .mn_container .mn_visual {
   position: relative;
   width: 55%;
   height: 550px;
+}
+
+@media screen and (max-width: 992px) {
+  section.main .mn_container .mn_visual {
+    position: none;
+    display: block;
+    width: 100%;
+  }
 }
 
 section.main .mn_container .mn_visual .mn_background .elements div {
@@ -776,7 +769,7 @@ section.main .mn_container .mn_visual .mn_background .bg_planet div:nth-of-type(
 }
 
 section.main .mn_container .mn_visual .mn_background .bg_planet div:nth-of-type(2) {
-  top: 0%;
+  top: 2%;
   left: 35%;
   z-index: 100;
   width: 110px;
@@ -828,6 +821,12 @@ section.main .mn_container .mn_visual .mn_background .bg_planet div:nth-of-type(
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_visual .mn_background .bg_planet div:nth-of-type(5) {
+    left: 27%;
+  }
+}
+
 section.main .mn_container .mn_visual .elements {
   width: 50px;
 }
@@ -838,6 +837,13 @@ section.main .mn_container .mn_tit {
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_tit {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 section.main .mn_container .mn_tit h3 {
@@ -852,6 +858,13 @@ section.main .mn_container .mn_tit > p {
   font-weight: 200;
 }
 
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_tit > p {
+    text-align: center;
+    padding: 0 auto 30px;
+  }
+}
+
 section.main .mn_container .mn_tit > a {
   display: flex;
   width: 200px;
@@ -860,6 +873,22 @@ section.main .mn_container .mn_tit > a {
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_tit > a {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  section.main .mn_container .mn_tit > a:nth-of-type(1) {
+    padding-top: 15px;
+    border-top: 1px solid #000;
+  }
+  section.main .mn_container .mn_tit > a:nth-of-type(3) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+  }
 }
 
 section.main .mn_container .mn_tit > a:hover {
@@ -907,6 +936,12 @@ section.main .mn_container .mn_tit .mn_portfolio {
   position: relative;
   width: 100%;
   height: 268px;
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_tit .mn_portfolio {
+    position: none;
+  }
 }
 
 section.main .mn_container .mn_tit .mn_portfolio > a {
