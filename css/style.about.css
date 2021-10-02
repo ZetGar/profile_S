@@ -336,7 +336,7 @@ header .hd_content .total div {
   display: block;
   position: absolute;
   top: calc(50% - 1.5px);
-  right: 20px;
+  left: 0;
   z-index: 9999;
   width: 25px;
   height: 3px;
