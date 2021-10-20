@@ -1,100 +1,97 @@
-$(function(){
+$(function () {
   // header 영역 부분
-  $(window).on('scroll', function(){
-    const $header = $('header');
-    $('header').toggleClass('sticky', window.scrollY > 0);
+  $(window).on("scroll", function () {
+    const $header = $("header");
+    $("header").toggleClass("sticky", window.scrollY > 0);
   });
 
   const arrTopVal = [];
 
-  for(let i=0;i<3;i++){
-    arrTopVal[i] = $('section').eq(i).offset().top;
+  for (let i = 0; i < 3; i++) {
+    arrTopVal[i] = $("section").eq(i).offset().top;
   }
 
-  const moveFn = function(idx){
-    $('html,body').stop().animate({scrollTop:arrTopVal[idx]-80})
-  }
+  const moveFn = function (idx) {
+    $("html,body")
+      .stop()
+      .animate({ scrollTop: arrTopVal[idx] - 80 });
+  };
 
-
-  const $lnb = $('.lnb>li');
-  $lnb.on('click', function(evt){
+  const $lnb = $(".lnb>li");
+  $lnb.on("click", function (evt) {
     evt.preventDefault();
 
     const nowIdx = $lnb.index(evt.currentTarget);
     moveFn(nowIdx);
   });
 
-    // $lnb.eq(nowIdx).addClass('on').siblings().removeClass('on');
-    $(window).on('scroll', function(){
-      const scrollTop = $(window).scrollTop();
-      console.log(scrollTop);
+  // $lnb.eq(nowIdx).addClass('on').siblings().removeClass('on');
+  $(window).on("scroll", function () {
+    const scrollTop = $(window).scrollTop();
+    console.log(scrollTop);
 
-    
-    for(let i=0;i<3;i++){
-
-      if(scrollTop>=arrTopVal[i]-400){
-        $lnb.eq(i).addClass('on').siblings().removeClass('on');
-      } else if(scrollTop<arrTopVal[0]){
-        $lnb.eq(0).addClass('on');
+    for (let i = 0; i < 3; i++) {
+      if (scrollTop >= arrTopVal[i] - 400) {
+        $lnb.eq(i).addClass("on").siblings().removeClass("on");
+      } else if (scrollTop < arrTopVal[0]) {
+        $lnb.eq(0).addClass("on");
       }
     }
   });
 
-  $('.logo>a').on('click',function(evt){
+  $(".logo>a").on("click", function (evt) {
     evt.preventDefault();
 
-    $('html,body').stop().animate({
-      scrollTop:0
+    $("html,body").stop().animate({
+      scrollTop: 0,
     });
   });
 
+  $(".total").on("click", function () {
+    $(this).toggleClass("on");
 
-  
-
-  $('.total').on('click',function(){
-    $(this).toggleClass('on');
-    
-    if($('.total').hasClass('on')){
-      $('nav').css({
-        right: '-7%'
+    if ($(".total").hasClass("on")) {
+      $("nav").css({
+        right: "0",
       });
     } else {
-      $('nav').css({
-        right: '-500px'
+      $("nav").css({
+        right: "-500px",
       });
     }
   });
-  
+
   // contact
-  $('.gnb>.pop_con').on('click', function(evt){
+  $(".gnb>.pop_con").on("click", function (evt) {
     evt.preventDefault();
 
-
-    $('.total').removeClass('on').on('click', function(){
-      if($(window).width()>992){
-        $('.nav').css({
-          right: '-500px'
-        });
-      }
-    });
+    $(".total")
+      .removeClass("on")
+      .on("click", function () {
+        if ($(window).width() > 992) {
+          $(".nav").css({
+            right: "-500px",
+          });
+        }
+      });
 
     // popup_contact
-    $('#popup').toggleClass('on');
+    $("#popup").toggleClass("on");
 
-    if($('#popup').hasClass('on')){
-      $('#popup').show();
-      $('.gnb>li').eq(3).addClass('on').siblings().removeClass('on');
+    if ($("#popup").hasClass("on")) {
+      $("#popup").show();
+      $(".gnb>li").eq(3).addClass("on").siblings().removeClass("on");
     }
 
-    $('.close').on('click',function(){
-      $('#popup').hide();
-      $('.gnb>li').eq(2).addClass('on').siblings().removeClass('on');
+    $(".close").on("click", function () {
+      $("#popup").hide();
+      $(".gnb>li").eq(2).addClass("on").siblings().removeClass("on");
     });
 
-    $('#popup').on('click',function(e){
-      if(e.target == e.currentTarget){
-        $('#popup').hide();
-        $('.gnb>li').eq(2).addClass('on').siblings().removeClass('on');
+    $("#popup").on("click", function (e) {
+      if (e.target == e.currentTarget) {
+        $("#popup").hide();
+        $(".gnb>li").eq(2).addClass("on").siblings().removeClass("on");
       }
     });
   });
