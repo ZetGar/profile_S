@@ -26,32 +26,28 @@ $titFont: unquote("noto sans CJK KR");
   background-attachment: fixed;
 }
 
-body {
-  width: 100vw;
-}
+// span {
+//   position: absolute;
 
-span {
-  position: absolute;
+//   width: 10px;
+//   height: 10px;
+//   background-image: url(./../images/star_move.svg);
+//   background-size: cover;
+//   pointer-events: none;
+//   transform: translate(-50%, -50%);
+//   animation: starmove 4s linear infinite;
+// }
 
-  width: 10px;
-  height: 10px;
-  background-image: url(./../images/star_move.svg);
-  background-size: cover;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  animation: starmove 4s linear infinite;
-}
-
-@keyframes starmove {
-  0% {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -1000%);
-    opacity: 0;
-  }
-}
+// @keyframes starmove {
+//   0% {
+//     transform: translate(-50%, -50%);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: translate(-50%, -1000%);
+//     opacity: 0;
+//   }
+// }
 
 section.main {
   width: 100vw;

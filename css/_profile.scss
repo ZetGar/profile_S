@@ -27,10 +27,6 @@ header {
 
   transition: 0.6s;
 
-  @media #{$tablet} {
-    width: 100vw;
-  }
-
   &.sticky {
     height: 60px;
     background-color: #fff;
@@ -38,6 +34,10 @@ header {
 
     .hd_content {
       padding: 15px 0;
+
+      @media #{$tablet} {
+        width: 100%;
+      }
 
       .logo {
         a {
