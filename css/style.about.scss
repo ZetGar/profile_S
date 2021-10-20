@@ -26,6 +26,8 @@ section.introduce {
   width: 1000px;
   margin: 180px auto;
   @media #{$tablet} {
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
   h2 {
@@ -51,7 +53,7 @@ section.introduce {
       margin: 0 auto;
 
       @media #{$mobile} {
-        display: block;
+        flex-direction: column;
       }
     }
     h3 {
@@ -59,8 +61,8 @@ section.introduce {
       margin: 0;
 
       @media #{$mobile} {
-        display: block;
-        margin: 0 auto;
+        order: 2;
+        margin: 50px auto 0;
         text-align: center;
       }
 
@@ -77,9 +79,6 @@ section.introduce {
         }
 
         @media #{$mobile} {
-          position: absolute;
-          top: 650px;
-          left: calc(50% - 75px);
           width: 150px;
           height: 35px;
 
@@ -106,6 +105,8 @@ section.introduce {
     .in_iam {
       width: 70%;
       @media #{$mobile} {
+        order: -2;
+
         width: 90%;
         margin: 0 auto;
         & br {
@@ -124,6 +125,7 @@ section.introduce {
     }
   }
 } //end of section_introduce
+
 section.swot {
   display: flex;
   justify-content: center;
@@ -147,15 +149,15 @@ section.swot {
 
     @media #{$tablet} {
       width: 80%;
-      margin: 0 auto;
+      flex-wrap: wrap;
       @media #{$mobile} {
-        display: block;
+        flex-direction: column;
       }
     }
 
     div {
       @media #{$tablet} {
-        width: 50%;
+        width: 40%;
         margin: 50px auto;
       }
     }
@@ -179,32 +181,25 @@ section.swot {
         background-color: #b13636;
         border-radius: 50%;
         background-size: contain;
+
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
       }
 
       &.s:before {
         background-image: url(./../images/strength.svg);
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center center;
       }
 
       &.w:before {
         background-image: url(./../images/weakness.svg);
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center center;
       }
       &.o:before {
         background-image: url(./../images/opportunity.svg);
         background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center center;
       }
       &.t:before {
         background-image: url(./../images/treat.svg);
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center center;
       }
     }
     p {
@@ -212,6 +207,7 @@ section.swot {
     }
   }
 } //end of section_swot
+
 section.interview {
   width: 100vw;
   background-color: #b13636;
@@ -232,11 +228,11 @@ section.interview {
       width: 800px;
       height: 800px;
       margin: 0 auto;
-      // border: 1px solid yellow;
 
       @media #{$mobile} {
+        overflow: initial;
         width: 100vw;
-        height: 1350px;
+        height: auto;
         margin: 0 auto;
       }
 
@@ -252,10 +248,10 @@ section.interview {
         padding: 200px 0;
 
         @media #{$mobile} {
-          display: block;
+          flex-direction: column;
           position: initial;
 
-          width: 80vw;
+          width: 90vw;
           margin: 0 auto;
           padding: 50px 0;
         }
@@ -271,13 +267,19 @@ section.interview {
 
           @media #{$mobile} {
             width: 100%;
+            padding: 50px;
+
             &:nth-of-type(3) {
               display: none;
             }
             &:nth-of-type(4) {
-              display: none;
+              position: relative;
+              left: 200px;
             }
             &:nth-of-type(5) {
+              display: none;
+            }
+            &:nth-of-type(6) {
               display: none;
             }
           }
@@ -331,8 +333,18 @@ section.interview {
           .cont {
             overflow: hidden;
             height: 210px;
+
+            @media #{$mobile} {
+              overflow: visible;
+              height: auto;
+            }
+
             p {
               font-size: 1.1rem;
+
+              @media #{$mobile} {
+                font-size: 1.3rem;
+              }
             }
           }
         }
@@ -379,3 +391,35 @@ section.interview {
     }
   }
 } //end of section_interview
+
+.mo_btn {
+  display: none;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  text-align: center;
+  line-height: 45px;
+  font-size: 600;
+
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+
+  &:nth-of-type(1) {
+    bottom: 80px;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+
+  @media #{$mobile} {
+    display: block;
+  }
+}

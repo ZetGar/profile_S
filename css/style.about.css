@@ -520,6 +520,8 @@ section.introduce {
 
 @media screen and (max-width: 992px) {
   section.introduce {
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
 }
@@ -554,7 +556,7 @@ section.introduce .in_container {
 
 @media screen and (max-width: 992px) and (max-width: 768px) {
   section.introduce .in_container {
-    display: block;
+    flex-direction: column;
   }
 }
 
@@ -565,8 +567,8 @@ section.introduce .in_container h3 {
 
 @media screen and (max-width: 768px) {
   section.introduce .in_container h3 {
-    display: block;
-    margin: 0 auto;
+    order: 2;
+    margin: 50px auto 0;
     text-align: center;
   }
 }
@@ -585,9 +587,6 @@ section.introduce .in_container h3 a:hover {
 
 @media screen and (max-width: 768px) {
   section.introduce .in_container h3 a {
-    position: absolute;
-    top: 650px;
-    left: calc(50% - 75px);
     width: 150px;
     height: 35px;
     color: #b13636;
@@ -612,6 +611,7 @@ section.introduce .in_container .in_iam {
 
 @media screen and (max-width: 768px) {
   section.introduce .in_container .in_iam {
+    order: -2;
     width: 90%;
     margin: 0 auto;
   }
@@ -652,19 +652,19 @@ section.swot .swot_container {
 @media screen and (max-width: 992px) {
   section.swot .swot_container {
     width: 80%;
-    margin: 0 auto;
+    flex-wrap: wrap;
   }
 }
 
 @media screen and (max-width: 992px) and (max-width: 768px) {
   section.swot .swot_container {
-    display: block;
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 992px) {
   section.swot .swot_container div {
-    width: 50%;
+    width: 40%;
     margin: 50px auto;
   }
 }
@@ -686,34 +686,26 @@ section.swot .swot_container h3:before {
   background-color: #b13636;
   border-radius: 50%;
   background-size: contain;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 section.swot .swot_container h3.s:before {
   background-image: url(./../images/strength.svg);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 section.swot .swot_container h3.w:before {
   background-image: url(./../images/weakness.svg);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 section.swot .swot_container h3.o:before {
   background-image: url(./../images/opportunity.svg);
   background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 section.swot .swot_container h3.t:before {
   background-image: url(./../images/treat.svg);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 section.swot .swot_container p {
@@ -747,8 +739,9 @@ section.interview .inter_container .inter_gide {
 
 @media screen and (max-width: 768px) {
   section.interview .inter_container .inter_gide {
+    overflow: initial;
     width: 100vw;
-    height: 1350px;
+    height: auto;
     margin: 0 auto;
   }
 }
@@ -765,9 +758,9 @@ section.interview .inter_container .inter_gide .inter_card {
 
 @media screen and (max-width: 768px) {
   section.interview .inter_container .inter_gide .inter_card {
-    display: block;
+    flex-direction: column;
     position: initial;
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
     padding: 50px 0;
   }
@@ -786,14 +779,19 @@ section.interview .inter_container .inter_gide .inter_card li {
 @media screen and (max-width: 768px) {
   section.interview .inter_container .inter_gide .inter_card li {
     width: 100%;
+    padding: 50px;
   }
   section.interview .inter_container .inter_gide .inter_card li:nth-of-type(3) {
     display: none;
   }
   section.interview .inter_container .inter_gide .inter_card li:nth-of-type(4) {
-    display: none;
+    position: relative;
+    left: 200px;
   }
   section.interview .inter_container .inter_gide .inter_card li:nth-of-type(5) {
+    display: none;
+  }
+  section.interview .inter_container .inter_gide .inter_card li:nth-of-type(6) {
     display: none;
   }
 }
@@ -850,8 +848,21 @@ section.interview .inter_container .inter_gide .inter_card li .cont {
   height: 210px;
 }
 
+@media screen and (max-width: 768px) {
+  section.interview .inter_container .inter_gide .inter_card li .cont {
+    overflow: visible;
+    height: auto;
+  }
+}
+
 section.interview .inter_container .inter_gide .inter_card li .cont p {
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.interview .inter_container .inter_gide .inter_card li .cont p {
+    font-size: 1.3rem;
+  }
 }
 
 section.interview .inter_container > a {
@@ -902,5 +913,35 @@ section.interview .inter_container > a:nth-of-type(2) {
 @media screen and (max-width: 992px) {
   section.interview .inter_container > a:nth-of-type(2) {
     right: calc(50% - 50px);
+  }
+}
+
+.mo_btn {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 600;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.mo_btn:nth-of-type(1) {
+  bottom: 80px;
+}
+
+.mo_btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .mo_btn {
+    display: block;
   }
 }
