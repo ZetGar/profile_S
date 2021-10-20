@@ -101,7 +101,7 @@ header {
 
 @media screen and (max-width: 992px) {
   header {
-    width: 100%;
+    width: 100vw;
   }
 }
 

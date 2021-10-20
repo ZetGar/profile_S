@@ -28,7 +28,7 @@ header {
   transition: 0.6s;
 
   @media #{$tablet} {
-    width: 100%;
+    width: 100vw;
   }
 
   &.sticky {
