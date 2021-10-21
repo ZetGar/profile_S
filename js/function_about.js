@@ -25,7 +25,6 @@ $(function () {
     moveFn(nowIdx);
   });
 
-  // $lnb.eq(nowIdx).addClass('on').siblings().removeClass('on');
   $(window).on("scroll", function () {
     const scrollTop = $(window).scrollTop();
     console.log(scrollTop);
@@ -69,7 +68,6 @@ $(function () {
   });
 
   // interview
-
   const $slideContainer = $(".inter_card");
   const $card = $slideContainer.children("li");
   const $more = $(".more");

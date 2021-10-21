@@ -178,6 +178,12 @@ header .hd_content nav {
   }
 }
 
+@media screen and (max-width: 992px) and (max-width: 768px) {
+  header .hd_content nav {
+    width: 40%;
+  }
+}
+
 header .hd_content nav .gnb {
   display: flex;
   justify-content: space-between;
@@ -423,7 +429,15 @@ footer address span {
 
 @media screen and (max-width: 992px) {
   #popup .contact {
+    width: 100%;
     left: calc(50% - 38%);
+  }
+}
+
+@media screen and (max-width: 992px) and (max-width: 768px) {
+  #popup .contact {
+    width: 80%;
+    height: 45%;
   }
 }
 
@@ -469,6 +483,12 @@ footer address span {
 
 #popup .contact .con_sns a:hover i {
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #popup .contact .con_sns {
+    margin: 50px 0 0 50px;
+  }
 }
 
 #popup .contact .close {

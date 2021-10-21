@@ -105,6 +105,10 @@ header {
 
         background-color: #666;
         transition: 0.3s;
+
+        @media #{$mobile} {
+          width: 40%;
+        }
       }
 
       .gnb {
@@ -359,7 +363,13 @@ footer {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 
     @media #{$tablet} {
+      width: 100%;
       left: calc(50% - 38%);
+
+      @media #{$mobile} {
+        width: 80%;
+        height: 45%;
+      }
     }
 
     h3 {
@@ -403,6 +413,9 @@ footer {
             color: #fff;
           }
         }
+      }
+      @media #{$mobile} {
+        margin: 50px 0 0 50px;
       }
     }
 

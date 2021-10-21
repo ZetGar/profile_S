@@ -1,57 +1,7 @@
 @import "_profile";
-// @import "_btn";
 
 $tablet: "screen and (max-width:992px)";
 $mobile: "screen and (max-width:768px)";
-$titFont: unquote("noto sans CJK KR");
-
-// @mixin flex {
-//   display: -webkit-box;
-//   display: -moz-box;
-//   display: -ms-flexbox;
-//   display: -webkit-flex;
-//   display: flex;
-//   -moz-flex-direction: column;
-//   -ms-flex-direction: column;
-//   -webkit-flex-direction: column;
-//   flex-direction: column;
-// }
-
-// @mixin bg {
-//   width: 100vw;
-//   height: 100%;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   background-attachment: fixed;
-// }
-
-// span {
-//   position: absolute;
-
-//   width: 10px;
-//   height: 10px;
-//   background-image: url(./../images/star_move.svg);
-//   background-size: cover;
-//   pointer-events: none;
-//   transform: translate(-50%, -50%);
-//   animation: starmove 4s linear infinite;
-// }
-
-// @keyframes starmove {
-//   0% {
-//     transform: translate(-50%, -50%);
-//     opacity: 1;
-//   }
-//   100% {
-//     transform: translate(-50%, -1000%);
-//     opacity: 0;
-//   }
-// }
-
-body {
-  height: auto;
-}
 
 section.main {
   width: 100vw;
@@ -209,6 +159,8 @@ section.main {
         .bg_planet {
           div {
             border: 1.5px solid #000;
+            background-size: contain;
+            background-repeat: no-repeat;
 
             &:nth-of-type(1) {
               top: 30%;
@@ -221,8 +173,6 @@ section.main {
               background-size: 120%;
               background-position: center center;
               border-radius: 50%;
-              // box-shadow: 0 0 7px rgba(0, 0, 0, 0.2),
-              //   inset 0 0 3px rgba(0, 0, 0, 0.5);
 
               animation: planet 20s infinite;
 
@@ -242,8 +192,6 @@ section.main {
               background-size: 120%;
               background-position: center center;
               border-radius: 50%;
-              // box-shadow: 0 0 7px rgba(0, 0, 0, 0.2),
-              //   inset 0 0 3px rgba(0, 0, 0, 0.5);
 
               animation: shake 2s infinite;
 
@@ -253,8 +201,8 @@ section.main {
               }
             }
             &:nth-of-type(3) {
-              top: 23%;
-              right: 25%;
+              top: 20%;
+              right: 28%;
               z-index: 100;
               width: 120px;
               height: 120px;
@@ -262,10 +210,10 @@ section.main {
               background-size: 120%;
               background-position: center center;
               border-radius: 50%;
-              // box-shadow: 0 0 7px rgba(0, 0, 0, 0.2),
-              //   inset 0 0 3px rgba(0, 0, 0, 0.5);
+
               animation: shake 2s infinite;
               @media #{$mobile} {
+                top: 23%;
                 right: 20%;
               }
             }
@@ -279,8 +227,7 @@ section.main {
               background-size: 120%;
               background-position: center center;
               border-radius: 50%;
-              // box-shadow: 0 0 7px rgba(0, 0, 0, 0.2),
-              //   inset 0 0 3px rgba(0, 0, 0, 0.5);
+
               animation: planet 30s infinite;
 
               @media #{$mobile} {
@@ -289,21 +236,16 @@ section.main {
               }
             }
             &:nth-of-type(5) {
-              top: 18%;
-              left: 30%;
-              z-index: 50;
-              width: 80%;
+              bottom: 20%;
+              width: 100%;
               height: 65%;
               background-image: url(./../images/mn_uju.gif);
-              background-size: contain;
-              background-repeat: no-repeat;
+              background-position: 50%;
 
               border: none;
 
               @media #{$mobile} {
-                width: 100%;
-                top: 25%;
-                left: 18%;
+                bottom: 10%;
               }
             }
           }
